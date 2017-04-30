@@ -1,0 +1,23 @@
+#! /bin/bash
+# bash script to connect to speedtest.net
+# get an idea of the inet speed at home
+# uses speednet-cli version 1.06 from https://github.com/sivel/speedtest-cli
+# amend path
+
+local_path="/home/ola/git/speedtest/"
+program_file="speedtest --csv --server "
+output_file="${local_path}dsl-speed.csv"
+echo $local_path
+echo $program_file
+echo $output_file
+
+# speedtest --list gives you a list of servers you may use.
+
+# command
+for i in 1746 5337; do
+echo $i
+	output_file="${local_path}server_${i}_dsl-speed.csv"	
+	$local_path$program_file$i >> $output_file
+
+done
+
