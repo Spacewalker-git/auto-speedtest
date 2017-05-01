@@ -4,7 +4,7 @@
 # uses speednet-cli version 1.06 from https://github.com/sivel/speedtest-cli
 # amend path
 
-local_path="/home/ola/git/speedtest/"
+local_path="/path/to/speedtest/"
 program_file="speedtest --csv --server "
 output_file="${local_path}dsl-speed.csv"
 echo $local_path
@@ -13,7 +13,9 @@ echo $output_file
 
 # speedtest --list gives you a list of servers you may use.
 
-# command
+# command $i are the server IDs speedtest is using.
+# output is written to separate files per ID
+# to get a header line for the csv-file execute speedtest manually with --csv-header.
 for i in 1746 5337; do
 echo $i
 	output_file="${local_path}server_${i}_dsl-speed.csv"	
