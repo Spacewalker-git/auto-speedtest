@@ -1,2 +1,2 @@
 This is the crontab entry to automate speedtest for 2 times a hour.
-11/41 *    * * *   ola      /home/ola/git/speedtest/st.bsh &
+11/41 *    * * *   ola      /path/to/bashfile/speedtest/st.bsh &
